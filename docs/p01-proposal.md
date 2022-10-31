@@ -13,12 +13,12 @@ Autumn 2022
 Our main question is how do external factors affect people's willingness to go to the gym. This question is important because in order to make gym-going easier, we want to provide newcomers times to go to the gym when crowdiness is at its least. To address this question, we will perform an analysis on teamperature, weather, seasons, time, and their relationship on gym crowdiness. 
 
 ### Keywords
-Gym, fitness, crowdiness 
+Gym, fitness, foot traffic 
 
 ### Introduction
 The Intramural Activities building (IMA)  is one of many great resources offered to students attending the University of Washington. Although the IMA is free, many students still do not take full advantage of the facility due to the intimidating environment that surrounds the building. Our goal with this project is to make going to the IMA easier for students who are looking to start working out. We plan to primarily address this issue by analyzing a [dataset](https://www.kaggle.com/datasets/nsrose7224/crowdedness-at-the-campus-gym?datasetId=527) that tracks crowdiness at a campus gym. 
 
-In order to effectively provide students a comprehensive idea of when good times to go to the gym are, we’ll pull data of crowdiness at different times by weekday, with exceptions on holidays. Seeing as how the University in the dataset is of a much smaller size, crowdedness will be measured as a proportion with the max crowdedness value. Additional segmentations for the dataset includes weather, seasons, and temperature. All of this data will be analyzed and provided to students to find a good time to go to the gym when crowdiness is at it’s minimum. 
+In order to effectively provide students a comprehensive idea of when good times to go to the gym are, we’ll pull data of crowdiness at different times by weekday, with exceptions on holidays. Seeing as how the University gym (Brekeley) in the dataset is of a very similar size, crowdedness is assumed to be similar in number. Additional segmentations for the dataset includes weather, seasons, and temperature. All of this data will be analyzed and provided to students to find a good time to go to the gym when crowdiness is at it’s minimum. 
 
 ### Problem Domain
 
@@ -36,7 +36,7 @@ Holidays and seasons may have an effect on gym attendance - an example of this w
 
 ### Expected Implications
 
-### Limitations
+### Limitations 
 
 ### Acknowledgements
 We would like to acknowledge Thomas Winegarden and Yubing Tian for being great instructors. 
