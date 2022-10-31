@@ -23,11 +23,12 @@ In order to effectively provide students a comprehensive idea of when good times
 ### Problem Domain
 
 ### Research Questions
-Is there a relationship between day of the week and gym crowdiness? 
+**Is there a relationship between day of the week and gym crowdiness?**
 
-How does rainy weather affect people’s willingness to go to the gym?
 
-Do weekends and holidays affect gym traffic?
+**How does rainy weather affect people’s willingness to go to the gym?**
+
+**Do weekends and holidays affect gym traffic?**
 
 ### The Dataset
 
