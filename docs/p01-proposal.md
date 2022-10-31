@@ -24,11 +24,13 @@ In order to effectively provide students a comprehensive idea of when good times
 
 ### Research Questions
 **Is there a relationship between day of the week and gym crowdiness?**
-
+Each day comes with different commitments - people may be busy with class and commitments one day, but have nothing on the weekends. We want to see whether there are big differences in the amount of people there during the weekend compared to the number of people there on a weekday and single-out days with the least traffic.
 
 **How does rainy weather affect people’s willingness to go to the gym?**
+Weather condition is an important factor when people decide to go outside or not, and going to the IMA is no exception. We want to see if there is a connection between harsh weather and gym attendance with the goal of calculating an average change metric when it is raining. 
 
 **Do weekends and holidays affect gym traffic?**
+Holidays and seasons may have an effect on gym attendance - an example of this would be a spike in gym traffic following New Year or a dip in gym traffic during Thanksgiving break. We want to find out whether holidays affect gym attendance and on an even broader scale, whether different seasons have varying attendance levels. 
 
 ### The Dataset
 
