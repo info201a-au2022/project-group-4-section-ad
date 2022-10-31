@@ -42,9 +42,10 @@ Holidays and seasons may have an effect on gym attendance - an example of this w
 We would like to acknowledge Thomas Winegarden and Yubing Tian for being great instructors. 
 
 ### References
+“Crowdedness at the Campus Gym.” Kaggle, 19 Mar. 2017, www.kaggle.com/datasets/nsrose7224/crowdedness-at-the-campus-gym.
 
 ### Appendix A: Questions
-
+We only have one dataset, but it is very thorough with **11** comprehensive variables and **26,000** observations which gives us plenty of data to work with. Can we go through with using just this dataset, as it is also very specific and it may be hard for us to find other relevant datasets that won't detract from our analysis? We think this dataset 
 For what to do, see the [`../instructions/`](../instructions/) directory, specifically: 
 
 * [Design Brief](../instructions/project-design-brief.pdf)
