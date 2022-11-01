@@ -68,8 +68,3 @@ Holmes, Daniel. “University of Ottawa Workout Session Demand.” Kaggle, 18 Ja
 
 ### Appendix A: Questions
 We only have one dataset, but it is very thorough with **11** comprehensive variables and **26,000** observations which gives us plenty of data to work with. Can we go through with using just this dataset, as it is also very specific and it may be hard for us to find other relevant datasets that won't detract from our analysis? 
-
-For what to do, see the [`../instructions/`](../instructions/) directory, specifically: 
-
-* [Design Brief](../instructions/project-design-brief.pdf)
-* [Project Proposal Requirements](../instructions/p01-proposal-requirements.md)
