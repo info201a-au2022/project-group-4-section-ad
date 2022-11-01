@@ -38,7 +38,6 @@ The first dataset we have is from UC Berkeley relating to their gym crowding dur
 | Name of File  | Crowdedness at Campus Gym | Fitness Analysis | University of Ottawa Workout Session Demand |
 | --------------------------------| --------|---------|------|
 | Number of Observations | 62185 | 546 | 404339 |
-| --------------------------------| -----------------|----|----|
 | Number of Variables| 11  | 8 | 7 |
 
 For the first dataset, Nick Rose collected the data. At the time he was a student at UC Berkeley and used the data for him and others to practice machine learning. It was collected around 6 years ago and was made to see how crowded the gym was. The second dataset was collected by Nithilaa who is a data science student at PSG College Of Technology. It was collected just for survey reasons. The third dataset was made by Daniel Holmes who is most likely a student at University of Ottawa. There is no information on what they do there.
@@ -62,7 +61,9 @@ We would like to acknowledge Thomas Winegarden and Yubing Tian for being great i
 
 ### References
 Rose, Nick. “Crowdedness at the Campus Gym.” Kaggle 19 Mar. 2017, www.kaggle.com/datasets/nsrose7224/crowdedness-at-the-campus-gym.
+
 A., Nithila. “Fitness Analysis.” Kaggle, 8 Sept. 2020, www.kaggle.com/datasets/nithilaa/fitness-analysis.
+
 Holmes, Daniel. “University of Ottawa Workout Session Demand.” Kaggle, 18 Jan. 2022, www.kaggle.com/datasets/danielholmes/university-of-ottawa-workout-enrolment.
 
 ### Appendix A: Questions
