@@ -21,6 +21,18 @@ The Intramural Activities building (IMA)  is one of many great resources offered
 In order to effectively provide students a comprehensive idea of when good times to go to the gym are, we’ll pull data of crowdiness at different times by weekday, with exceptions on holidays. Seeing as how the University gym (Brekeley) in the dataset is of a very similar size, crowdedness is assumed to be similar in number. Additional segmentations for the dataset includes weather, seasons, and temperature. All of this data will be analyzed and provided to students to find a good time to go to the gym when crowdiness is at it’s minimum. 
 
 ### Problem Domain
+Prompt: Use short sub-sections to describe your topic and the setting (that is, the sociotechnical situation), including project framing, human values, direct and indirect stakeholders, possible harms and benefits. See the Design Brief, section B.3. Note: You must include three citations to related work (URLs to similar work, high quality articles from the popular press, research papers, etc. ). You may find it helpful to include a figure. (About 400 words.)
+
+**Values**
+The main value our project is revolved around is gym accesibility. People often want to start going to the gym, yet according to a survey done by better.org, almost 20% of people who don't go to the gym due to confidence issues. Our goal is to provide people with a time where the gym is least busy, thus allowing for a more private workout. Additionally, our secondary value is to focus on timeliness. According to better.org, the leading barrier to going to the gym for many people is timeliness, with almost 40% of people choosing this option. By providing people with times during which the IMA has the least amount of people, we hope to help people spee dup their workouts.
+**Direct Stakeholders**
+Direct stakeholders in our project are people who want to go to the campus gym and workout but do not have the confidence to. They would directly use our project to find out times when they can go and not be intimidated by a big crowd at the gym. Additionally, another direct stakeholder in our project are people who want to go to the gym but do not have enough time. They would use our project to find good times to go to the gym and get a fast work out in. 
+**Indirect Stakeholders**
+The indirect stakeholders in our project are people who go to the campus gym in general, as although they may have plenty of time and no issues going to the gym, our project is collecting data on them in order to provide an analysis. 
+**Harms**
+One issue with our project is that it may lead to more crowding in the gym during times where foot traffic has historically been low. This is due to our project recommending the same time for a particular day as the least busy for everyone using our project. This would lead to our project working against its own goal. A workaround to this would be to update data as our project is being used, and accordingly spread people out.
+**Benefits**
+One benefit to our project is that it will help people find better times to go to the gym. Whether it be people who do not have the confidence to go to a crowded gym or people who have no time to spare, the project can benefit everyone who goes to the gym. 
 
 ### Research Questions
 **Is there a relationship between day of the week and gym crowdiness?**
@@ -50,6 +62,10 @@ All of the datasets were obtained from kaggle. We do credit the source of data.
 
 
 ### Expected Implications
+
+One expected implication of our study is the general activity of the gym. Outside of going to the gym yourself and finding out, there’s no service that shows how busy the gym is at a certain point. Something that could come out is a general line to follow for how busy a gym is at a certain point assuming nothing unpredicted happens. We can find out the general timeline of the gym for every day of the week and for each part of the day. This could help people decide when they see its best fit for them to go. 
+
+Another expected implication that we expect to find is how certain factors affect how busy the gym is. Things like weathers, midterms, and just time of year can affect how busy the gym is. We hope to find a general line of how the activity of the gym can change based on certain conditions. 
 
 ### Limitations 
 
