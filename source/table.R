@@ -1,19 +1,30 @@
-#table
+# Table
+
+# loads dpylr
 library("dpylr")
+
+#loads tidyverse
 library("tidyverse")
 
+# reads the csv file
+gym <- read.csv("data/data.csv")
 
-gym <- read.csv("C:/Users/Phamily/Documents/info201/group project/project-group-7-section-ad/data/data.csv")
+# filters the temperature to where it only shows above 60 degrees
+temp_filter <- gym %>% filter (temperature > 60)
 
-
-temp_filter <- gym %>% filter (temperature > 60 & number_people)
+# combines holidays and weekends to find out if a day is special at all
 special <- temp_filter %>%
   group_by(special_day = is_holiday + is_weekend)
-remove_rows <- special[,!names(special) %in% c("day_of_week","is_start_of_semester", "is_during_semester", "timestamp")]
 
+# removes unnecessary columns
+remove_rows <- special[,!names(special) %in% c("day_of_week","is_start_of_semester",
+                                               "is_during_semester", "timestamp")]
+
+# sorts the temperature in descdening order
 sorted <- (remove_rows[order(remove_rows$temperature, decreasing = TRUE), ]   )
+
+# changes the name of number_people to make it more readable
 colnames(sorted)[colnames(sorted) == "number_people"] ="number_of_people"
 
-view(remove_rows)
-
-# Short description
+# displays the table
+view(sorted)
