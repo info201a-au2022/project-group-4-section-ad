@@ -4,7 +4,7 @@
 library("tidyverse")
 
 # reads the csv file
-gym <- read.csv("data/data.csv")
+gym <- read.csv("../data/data.csv")
 
 # filters the temperature to where it only shows above 60 degrees
 temp_filter <- gym %>% filter (temperature > 60)
@@ -30,4 +30,4 @@ view(sorted)
 # A lot of the frequent hours happen to around the 14th hour. This suggest it's
 # a popular time. Also the temperatures high in this region tend to be in the
 # 9th month which may not be the same for UW. When the temperature is high,
-# there does not seem to be a low amount of people at the gym.
+# there does not seem to be a low amount of people at the gym.#table

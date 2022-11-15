@@ -2,19 +2,16 @@
 # Shows a 2d density estimation over the scatter plot
 
 # loads librarys that are used
-install.packages("installr")
-library(installr)
-updateR()
 library(tidyverse)
 library(stringr)
 library(ggplot2)
 
 # loads the gym data
-gym <- read.csv("data/data.csv")
+gym <- read.csv("../data/data.csv")
 
 # removes unnecessary data and filters the temperatures
 remove_rows_chart <- gym[,!names(gym) %in% c("day_of_week","is_start_of_semester",
-                                                     "is_during_semester", "timestamp")]
+                                             "is_during_semester", "timestamp")]
 temp_filter <- remove_rows_chart %>% filter (hour > 10 & hour < 18)
 
 # Renames the data to make them readable
