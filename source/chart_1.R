@@ -31,7 +31,7 @@ num_weekday <- gym_data %>%
 num_weekday$day <- factor(num_weekday$day, levels = c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"))
 
 #Creates heatmap of average people at any given time per day
-ggplot(num_weekday) +
+average_people_plot <- ggplot(num_weekday) +
   geom_tile(mapping = aes(x = day, y = graph_axis, fill = average_people), color = "black") +
   theme(axis.title.y = element_blank(),
         axis.text.y = element_blank(),
