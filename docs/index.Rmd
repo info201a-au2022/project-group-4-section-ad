@@ -1,54 +1,41 @@
 ---
-title: "Your Project Title"
-author: "project team members"
+title: "Crowdedness at the Campus Gym"
+author: "Justin Dong, David Pham"
 date: "1/22/2022"
 output: html_document
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+library(installr)
+library(ggplot2)
+library(knitr)
+gym_data <- read.csv("../data/data.csv")
+source("../source/table.R")
+source("../source/chart_1.R")
+source("../source/chart_3.R")
+source("../source/summary.R")
 ```
 
-## What is this file for?
+## About Our Data
+Our data set, "Crowdedness at the Campus Gym," contains `r get_observations()` observations total with `r get_metrics()` variables that were measured about different traffic levels at the Berkeley campus gym. The most amount of people inside the gym is `r get_max_crowdedness()` while the average amount of people present at the gym is `r get_average_crowdedness()`. The average temperature of the location of the gym is `r get_average_temperature()`, which is much higher than Seattles. 
 
-* This file will eventually become your project report for **P02: Exploratory Data Analysis**. Specifically, you will write rmarkdown to report your exploratory data analysis.
-
-* Please see Canvas for more details.
-
-## ACCESSING THE /source DIRECTORY
-### Example 1: Source some code and run a function
+## Table
 ```{r}
-# Example 1: Note relative path, which can be read: Up one
-# directory(..), down into source (/source), and 
-# then "source" an R file (data_access.R)
-source("../source/data_access.R")
-data_access_test()
+kable(sorted[1:50, ], caption = "Aggregate Information Table")
 ```
 
-### Example 2: Initialize a variable and then use it
-```{r}
-# Example 1: This function was "sourced" above
-msg <- data_access_test(" Morgan!")
+The table shows a summary of data 
+
+```{r heatmap, echo = FALSE}
+plot(average_people_chart)
 ```
 
-> `r msg` Hope you have a good day!! 
+This chart shows a heat mapping of every weekday and the average amount of people you can expect in the gym at any time. 
 
-## ABOUT THIS FILE: 
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
+```{r scatterplot, echo = FALSE}
+plot(scatterplot)
 ```
 
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+This scatterplot shows a plot of number of people at the gym compared to temperature
