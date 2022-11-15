@@ -10,7 +10,7 @@ library(stringr)
 library(ggplot2)
 
 # loads the gym data
-gym <- read.csv("C:/Users/Phamily/Documents/info201/group project/project-group-7-section-ad/data/data.csv")
+gym <- read.csv("data/data.csv")
 
 # removes unnecessary data and filters the temperatures
 remove_rows_chart <- gym[,!names(gym) %in% c("day_of_week","is_start_of_semester",
@@ -35,4 +35,4 @@ scatterplot + stat_density_2d(aes(fill = ..level..), geom="polygon")+
 # against temperature. It filters out odd times so it only shows the times during the main
 # parts of the day. There seems to be a frequent amount of times that there is around
 # 40 people going to the gym when the temperature is around 60-65. The lower the temperature
-# the less people go the gym.
+# the less people go the gym. Whether its a special day or does not seem to affect it.

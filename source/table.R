@@ -1,8 +1,5 @@
 # Table
 
-# loads dpylr
-library("dpylr")
-
 #loads tidyverse
 library("tidyverse")
 
@@ -28,3 +25,9 @@ colnames(sorted)[colnames(sorted) == "number_people"] ="number_of_people"
 
 # displays the table
 view(sorted)
+
+# short description
+# A lot of the frequent hours happen to around the 14th hour. This suggest it's
+# a popular time. Also the temperatures high in this region tend to be in the
+# 9th month which may not be the same for UW. When the temperature is high,
+# there does not seem to be a low amount of people at the gym.
