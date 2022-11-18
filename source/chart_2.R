@@ -28,6 +28,8 @@ average_people_per_temp <- temp_filter %>%
 
 
 # Scatter plot with line linking temperature difference to average people in gym
+# includes trend line
 temp_variance_plot <- ggplot(average_people_per_temp, aes(x=temperature_difference, y=average_people)) +
   geom_point() +
-  geom_line()
+  geom_line() +
+  geom_smooth(method = "lm")
