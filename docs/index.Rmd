@@ -19,23 +19,33 @@ source("../source/summary.R")
 ```
 
 ## About Our Data
-Our data set, "Crowdedness at the Campus Gym," contains `r get_observations()` observations total with `r get_metrics()` variables that were measured about different traffic levels at the Berkeley campus gym. The most amount of people inside the gym is `r get_max_crowdedness()` while the average amount of people present at the gym is `r get_average_crowdedness()`. The average temperature of the location of the gym is `r get_average_temperature()`, which is much higher than Seattles. 
+Our data set, "Crowdedness at the Campus Gym," contains `r get_observations()` observations total with `r get_metrics()` variables that were measured about different traffic levels at the Berkeley campus gym. The most amount of people inside the gym is `r get_max_crowdedness()` while the average amount of people present at the gym is `r get_average_crowdedness()`. The average temperature of the location of the gym is `r get_average_temperature()`, which is much higher than Seattles.
 
 ## Table
 ```{r}
 kable(sorted[1:50, ], caption = "Aggregate Information Table")
 ```
 
-The table shows a summary of data 
+The table shows a summary of the gym data under certain conditions. It removes uncessary columns that we are not calculating yet, and combines
+and takes use of the columns we are looking at as of right now like whether its a weekend or holiday. It also filters the data to only takes
+data from times that are above 60 degreees. This then shows the temperatures in descending order so we have the highest temperature peaks at the top.
+This table shows us how frequent people go to the gym during peak hours of temperatures. This could help us see if theres any correlation
+between temperature and how busy the gym is for college age students.
 
 ```{r heatmap, echo = FALSE}
 plot(average_people_chart)
 ```
 
-This chart shows a heat mapping of every weekday and the average amount of people you can expect in the gym at any time. 
+This chart shows a heat mapping of every weekday and the average amount of people you can expect in the gym at any time. This can show us how busy
+individual days at the gym and find out what days have the least amount of people. This can help people optimize what days they want to go the gym if
+they are trying to avoid the most amount of people. The heatmap shows each individual day and a red to orange assortment to show how busy the
+it is for that day.
 
 ```{r scatterplot, echo = FALSE}
 plot(scatterplot)
 ```
 
-This scatterplot shows a plot of number of people at the gym compared to temperature
+This scatterplot shows a plot of number of people at the gym compared to temperature. It can show us how frequent people visit the gym at each temperature
+range. The busiest parts of the scatterplot start to show a density by color to properly show how busy it is. This can help determine what times
+are best to go the gym for groups of people that are trying to avoid people or just to let people know how busy the gym could be. The scatterplot
+shows black dots for each point but as a area gets really busy, it switches to a graident of yellow to gold to show busy the gym is.
