@@ -42,6 +42,14 @@ they are trying to avoid the most amount of people. The heatmap shows each indiv
 it is for that day.
 
 ```{r scatterplot, echo = FALSE}
+plot(temp_variance_plot)
+```
+
+This scatterplot compares the difference in temperature from the average and then shows the amount of people at the gym during that time. This includes
+a trend line to show the times with the most frequent people. This focus more on the difference in temperature from the average rather than just a general
+temperature against gym crowdedness. This can help compare how lower or higher temperatures affects how busy the gym is.
+
+```{r scatterplot, echo = FALSE}
 plot(scatterplot)
 ```
 
