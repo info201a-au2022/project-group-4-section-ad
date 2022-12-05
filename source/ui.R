@@ -30,6 +30,23 @@ introduction <- tabPanel(
     to workout and get started. Additionally, even seasoned gym-goers will be able to use our project to find the
     optimal time to work out for maximum efficiency."),
 )
+
+authors <- "David Pham, Justin Dong"
+
+affiliation <- "INFO-201: Technical Foundations of Informatics - The Information School - University of Washington"
+
+index_report <- "Our group project revolves around gym crowdiness"
+
+research_question <- "Does temperature affect how busy the gym is?
+                      Does an holiday or special event affect how busy the gym is?
+                      How busy is the gym during each day of the week?"
+
+data_set <- "This dataset is Crowdedness at the Campus Gym (https://www.kaggle.com/datasets/nsrose7224/crowdedness-at-the-campus-gym).
+             Our dataset contains information from UC Berkeley on how crowded their gym is at a certain time
+             and information during that time that includes temperature, day of week, and relation to holiday.
+             The dataset marks the information every 10 minutes and contains over 60,000 lines.
+             "
+
 interactive_1 <- tabPanel(
   "Interactive"
   p("The first interactive is planned to be an heat map that shows days of week against and how crowded
