@@ -35,8 +35,6 @@ authors <- "David Pham, Justin Dong"
 
 affiliation <- "INFO-201: Technical Foundations of Informatics - The Information School - University of Washington"
 
-index_report <- "Our group project revolves around gym crowdiness"
-
 research_question <- "Does temperature affect how busy the gym is?
                       Does an holiday or special event affect how busy the gym is?
                       How busy is the gym during each day of the week?"
@@ -44,7 +42,8 @@ research_question <- "Does temperature affect how busy the gym is?
 data_set <- "This dataset is Crowdedness at the Campus Gym (https://www.kaggle.com/datasets/nsrose7224/crowdedness-at-the-campus-gym).
              Our dataset contains information from UC Berkeley on how crowded their gym is at a certain time
              and information during that time that includes temperature, day of week, and relation to holiday.
-             The dataset marks the information every 10 minutes and contains over 60,000 lines.
+             The dataset marks the information every 10 minutes and contains over 60,000 lines.This dataset was made 2016 and
+             consisted of about 26,000 people.
              "
 
 interactive_1 <- tabPanel(
