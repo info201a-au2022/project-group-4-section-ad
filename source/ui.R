@@ -1,4 +1,4 @@
-# ui R file
+# frontend shiny r file
 
 library(rsconnect)
 library(dplyr)
@@ -16,3 +16,12 @@ library(plotly)
 library(gganimate)
 library(gifski)
 library(shinycssloaders)
+
+introductory_page <- tabPanel("Introduction",
+
+  titlePanel("Project Introduction: Gym Crowdiness"),
+
+  p(introduction),
+
+  br(), br()
+)

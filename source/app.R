@@ -1,5 +1,3 @@
-# backend server shiny r file
-
 library(rsconnect)
 library(dplyr)
 library(ggplot2)
@@ -17,6 +15,12 @@ library(gganimate)
 library(gifski)
 library(shinycssloaders)
 
-server <- function(input, output, session) {
+source("chart_1.R")
+source("chart_2.R")
+source("chart_3.R")
+source("shiny_paragraphs.R")
 
-}
+source("server.R")
+source("ui.R")
+
+shinyApp(ui = ui, server = server)
