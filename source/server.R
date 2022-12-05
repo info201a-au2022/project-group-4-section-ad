@@ -1,33 +1,12 @@
-# backend server shiny r file
-
-library(rsconnect)
-library(dplyr)
+source("chart_1.R")
+source("chart_2.R")
+source("chart_3.R")
 library(ggplot2)
-library(shiny)
-library(reshape2)
-library(tidyverse)
-library(data.table)
-library(mapdata)
-library(ggmap)
-library(maps)
-library(viridis)
-library(DT)
-library(plotly)
-library(gganimate)
-library(gifski)
-library(shinycssloaders)
+library(dplyr)
 
-server <- function(input, output, session){
-# intro page
-
-# report page
-
-# summary page
-
-# analysis chart 1
-
-# Analysis Chart 2:
-
-# interative page 1
-
+server <- function(input, output) {
+  output$heatmap <- renderPlot{(
+    heatmap <- average_people_chart
+    heatmap
+  )}
 }

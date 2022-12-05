@@ -1,5 +1,3 @@
-# frontend shiny r file
-
 library(rsconnect)
 library(dplyr)
 library(ggplot2)
@@ -17,90 +15,44 @@ library(gganimate)
 library(gifski)
 library(shinycssloaders)
 
-introductory_page <- tabPanel("Introduction",
+source("chart_1.R")
+source("chart_2.R")
+source("chart_3.R")
 
-  titlePanel("Project Introduction: Gym Crowdedness"),
-
-  p(introduction),
-
-  br(), br()
+introduction <- tabPanel(
+  "Introduction",
+  titlePanel("How Crowded is the IMA?"),
+  p("Have you ever wanted to get into working out, but always thought that the IMA was too intimidating?
+    According to the New York post, almost 50% of Americans are intimidated by the prospect of working out
+    at a public gym. This project seeks to alleviate this issue for University of Washington students by answering the following question: How many people 
+    are at the IMA at any given time? To answer this question, we are analyzing data gathered on how crowded Berkeley's campus gym is throughout the year.
+    We hope that by answering this topic, we're able to help students new to the IMA find less crowded times 
+    to workout and get started. Additionally, even seasoned gym-goers will be able to use our project to find the 
+    optimal time to work out for maximum efficiency."),
 )
-
-# report page
-report_page <- tabPanel("Report",
-  h3("Gym Crowdedness"),
-  br(),
-
-  p(date), br(),
-  p(authors), br(),
-  p(affiliation), br(),
-  br(),
-
-
-  h3("Our Process"), br(),
-
-  tabsetPanel(
-    tabPanel("Index", br(), br(),
-      p(index.rmd_report),
-      p(research_questions),
-      p(data_set),
-      p(expected_implications),
-      p(findings),
-      p(discussion),
-      p(conclusion),
-      br(),
-    ),
-
-    tabPanel("Aggregate Table", br(), br(),
-      p(agg_table_report1),
-      p(agg_table_report2), br(), br(),
-      DT::dataTableOutput("agg_table"),
-      br(),
-      br(),
-      p(agg_table_report3),
-      p(agg_table_report4),
-      p(agg_table_report5),
-      br(),
-      br()
-    )
-  )
+interactive_1 <- tabPanel(
+  "Interactive"
+)
+interactive_2 <- tabPanel(
+  "Interactive"
+)
+interactive_3 <- tabPanel(
+  "Interactive"
+)
+takeaways <- tabPanel(
+  "Takeaways"
+)
+report <- tabPanel(
+  "Report"
 )
 
 
-# summary page
-summary_page <- tabPanel("Summary",
-
-  h3("Major Takeaways"), br(),
-
-  tabsetPanel(
-    tabPanel("Takeaways",
-      br(),
-      p(summary_takeaways),
-      p(summary_takeaways2),
-      p(summary_takeaways3),
-    ),
-  )
-)
-
-
-# interative page 1
-interactive_page_1 <- tabPanel("Temperature",
-
-  h3("temp"),
-  br(),
-)
-
-
-# interatice page 2
-interactive_page_2 <- tabPanel("Holiday",
-
-  h3("temp"),
-  br(),
-)
-
-# interatice page 3
-interactive_page_3 <- tabPanel("Day",
-
-  h3("temp"),
-  br(),
+ui <- navbarPage(
+  "Crowdedness At the IMA",
+  introduction,
+  interactive_1,
+  interactive_2,
+  interactive_3,
+  takeaways,
+  report
 )
