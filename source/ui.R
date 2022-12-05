@@ -26,7 +26,7 @@ introductory_page <- tabPanel("Introduction",
   br(), br()
 )
 
-# ---------- REPORT PAGE ----------
+# report page
 report_page <- tabPanel("Report",
   h3("Gym Crowdedness"),
   br(),
@@ -67,7 +67,7 @@ report_page <- tabPanel("Report",
 )
 
 
-# ---------- SUMMARY PAGE ----------
+# summary page
 summary_page <- tabPanel("Summary",
 
   h3("Major Takeaways"), br(),
@@ -83,7 +83,7 @@ summary_page <- tabPanel("Summary",
 )
 
 
-# ---------- INTERACTIVE PAGE 1 ----------
+# interative page 1
 interactive_page_1 <- tabPanel("Temperature",
 
   h3("temp"),
@@ -91,8 +91,15 @@ interactive_page_1 <- tabPanel("Temperature",
 )
 
 
-# ---------- INTERACTIVE PAGE 2 ----------
+# interatice page 2
 interactive_page_2 <- tabPanel("Holiday",
+
+  h3("temp"),
+  br(),
+)
+
+# interatice page 3
+interactive_page_3 <- tabPanel("Day",
 
   h3("temp"),
   br(),
