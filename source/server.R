@@ -17,6 +17,17 @@ library(gganimate)
 library(gifski)
 library(shinycssloaders)
 
-server <- function(input, output, session) {
+server <- function(input, output, session){
+# intro page
+
+# report page
+
+# summary page
+
+# analysis chart 1
+
+# Analysis Chart 2:
+
+# interative page 1
 
 }
