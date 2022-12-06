@@ -50,15 +50,24 @@ user_date <- dateInput(
   max = "2023-12-05"
 )
 
-user_time_min <- textInput(
+user_time_min <- selectInput(
   inputId = "early",
   label = "Input earliest time available in 24 hour time (Format: XX:XX)",
-  value = "05:00"
+  choices = list("0:00", "1:00", "2:00", "3:00", "4:00", "5:00", "6:00", 
+                 "7:00", "8:00", "9:00", "10:00", "11:00", "12:00", "13:00",
+                 "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00",
+                 "21:00", "22:00", "23:00", "24:00"),
+  selected = "05:00"
 )
-user_time_max <- textInput(
+
+user_time_max <- selectInput(
   inputId = "late",
   label = "Input latest time available in 24 hour time (Format: XX:XX)",
-  value = "10:00"
+  choices = list("0:00", "1:00", "2:00", "3:00", "4:00", "5:00", "6:00", 
+                 "7:00", "8:00", "9:00", "10:00", "11:00", "12:00", "13:00",
+                 "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00",
+                 "21:00", "22:00", "23:00", "24:00"),
+  selected = "12:00"
 )
 
 #introduction page
@@ -81,34 +90,19 @@ introduction <- tabPanel(
 #first interactive
 interactive_1 <- tabPanel(
   "Interactive",
-  p("How busy is the gym on any given day?"),
+  h3("How busy is the gym on any given day?"),
   sidebarLayout(
     sidebarPanel(
       user_date,
       p("Using this tool, users can pick any date within the next year and receive an approximation of how busy the gym will be per hour.
-        In general, it is best to go during mornings with numbers picking up closer to 5 PM and staying busy throughout the night. ")
+        In general, it is best to go during mornings with numbers picking up closer to 5 PM and staying busy throughout the night. "),
+      br(),
+      user_time_min,
+      user_time_max,
+      p("Additionally, users can pick a time range within the day that they have chosen in order to receive a filtered view of only
+        times that are applicable to them.")
     ),
     mainPanel(plotOutput("heatmap"), plotOutput("selectheatmap"))
-  ),
-  sidebarPanel(
-    user_time_min <- selectInput(
-      inputId = "early",
-      label = "Input earliest time available in 24 hour time (Format: XX:XX)",
-      choices = list("0:00", "1:00", "2:00", "3:00", "4:00", "5:00", "6:00", 
-                     "7:00", "8:00", "9:00", "10:00", "11:00", "12:00", "13:00",
-                     "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00",
-                     "21:00", "22:00", "23:00", "24:00"),
-      selected = "05:00"
-    ),
-    user_time_max <- selectInput(
-      inputId = "late",
-      label = "Input latest time available in 24 hour time (Format: XX:XX)",
-      choices = list("0:00", "1:00", "2:00", "3:00", "4:00", "5:00", "6:00", 
-                     "7:00", "8:00", "9:00", "10:00", "11:00", "12:00", "13:00",
-                     "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00",
-                     "21:00", "22:00", "23:00", "24:00"),
-      selected = "12:00"
-    )
   )
 )
 
