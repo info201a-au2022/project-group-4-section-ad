@@ -109,7 +109,19 @@ interactive_1 <- tabPanel(
 #second interactive
 interactive_2 <- tabPanel(
   "Interactive",
-  p("The second interactive is planned to focus on the time of day and how busy the gym crowded the gym is")
+  p("The second interactive is planned to focus on the time of day and how busy the gym crowded the gym is"),
+  titlePanel("Number of People"),
+  sidebarLayout(      
+    sidebarPanel(
+      selectInput("temperature", "Temperature:", 
+                  choices=colnames(gym_data)),
+      hr(),
+      helpText("Data from kaggle: Crowdedness at the Campus Gym")
+    ),
+    mainPanel(
+      plotOutput("barchart")  
+    )
+  )
 )
 
 #third interactive
@@ -122,12 +134,25 @@ interactive_3 <- tabPanel(
              hover = "plot_hover",
              brush = "plot_brush"
   ),
-  verbatimTextOutput("info")
+  verbatimTextOutput("gym_info")
 )
+
+summary_takeaways <- "temp 1"
+
+summary_takeaways_2 <- "temp 2"
+
+summary_takeaways_3 <- "temp 3"
 
 #takeaway page
 takeaways <- tabPanel(
-  "Takeaways"
+  "Takeaways",
+  h2("Takeaways:"),
+  h3("Heatmap:"),
+  p(summary_takeaways),
+  h3("Bar Chart:"),
+  p(summary_takeaways_2),
+  h3("Scatterplot:"),
+  p(summary_takeaways_3),
 )
 
 #report page

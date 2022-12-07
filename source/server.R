@@ -75,22 +75,32 @@ server <- function(input, output) {
     heatmap
   })
 
-  #interactive 3
+  # interactive 2
+  output$barchart <- renderPlot({
+        barplot(gym_data[,input$number_people], 
+            main=input$number_people,
+            ylab="Number of people",
+            xlab="temp")
+  })
+  
+  # interactive 3
+  Number_of_People <- gym_data$number_people
+  Temperature <- gym_data$temperature
+  
   output$scatterplot3 <- renderPlot({
-    plot(gym_data$number_people, gym_data$temperature)
+    plot(Number_of_People, Temperature)
   })
 
-  output$info <- renderText({
+  output$gym_info <- renderText({
     xy_str <- function(e) {
       if(is.null(e)) return("NULL\n")
-      paste0("x=", round(e$x, 1), " y=", round(e$y, 1), "\n")
+      paste0("Number of people:", round(e$x, 1), "Temperature:", round(e$y, 1), "\n")
     }
     xy_range_str <- function(e) {
       if(is.null(e)) return("NULL\n")
-      paste0("xmin=", round(e$xmin, 1), " xmax=", round(e$xmax, 1),
-             " ymin=", round(e$ymin, 1), " ymax=", round(e$ymax, 1))
+      paste0("Lowest people count: ", round(e$xmin, 1), " Highest people count: ", round(e$xmax, 1),
+             " Lowest temperature count:", round(e$ymin, 1), " Highest temperature count:", round(e$ymax, 1))
     }
-
     paste0(
       "click: ", xy_str(input$plot_click),
       "dblclick: ", xy_str(input$plot_dblclick),
