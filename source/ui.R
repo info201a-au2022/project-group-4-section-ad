@@ -117,12 +117,11 @@ interactive_3 <- tabPanel(
   "Interactive",
   p("The third interactive is planned to focus on how temperature affects the crowded the gym is."),
   ui <- basicPage(
-    plotOutput("plot1",
+    plotOutput("scatterplot3",
                click = "plot_click",
                dblclick = "plot_dblclick",
                hover = "plot_hover",
                brush = "plot_brush"),
-    plotOutput("scatterplot3")
   ))
 
 #takeaway page
