@@ -122,7 +122,8 @@ interactive_3 <- tabPanel(
                dblclick = "plot_dblclick",
                hover = "plot_hover",
                brush = "plot_brush"),
-  )
+  ),
+  verbatimTextOutput("info")
 )
 
 #takeaway page
