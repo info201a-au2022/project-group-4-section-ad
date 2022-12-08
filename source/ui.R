@@ -79,6 +79,12 @@ introduction <- tabPanel(
   titlePanel("How Crowded is the IMA?"),
   p(intro_blurb),
   br(),
+  p(strong(question_1)),
+  p(strong(question_2)),
+  p(strong(question_3)),
+  br(),
+  p(intro_blurb2),
+  titlePanel("Our Data"),
   p(data_set_description)
 )
 
