@@ -89,7 +89,7 @@ introduction <- tabPanel(
 
 #first interactive
 interactive_1 <- tabPanel(
-  "Interactive",
+  "Heatmap",
   h3("How busy is the gym on any given day?"),
   sidebarLayout(
     sidebarPanel(
@@ -112,28 +112,33 @@ test123 <- unique(gym_data$number_people)
 
 test321 <- gym_data %>%
   select(is_holiday:is_during_semester) %>%
-  names() 
+  names()
 
 interactive_2 <- tabPanel(
-  "Interactive",
+  "Barchart",
   p("The second interactive is planned to focus on the time of day and how busy the gym crowded the gym is"),
   titlePanel("Number of People"),
-  sidebarLayout(      
+  sidebarLayout(
     sidebarPanel(
       selectInput(inputId = "selects", choices = test123,
                   label = "Number of People:", multiple = TRUE),
+      p("Using this tool, users can pick any number of people that is within the dataset and recieve the occurence
+         of that number of people for that specfic type of day. In general, it is best to go for numbers of people
+        that occur more often for example 40."),
       selectInput(inputId = "selects2", choices = test321, label = "Select Attribute:",
-                  multiple = TRUE)
+                  multiple = TRUE),
+      p("This tool allows users to pick what type of special situation is happening. Depending on what siutaiton the
+         user wants to see, it will filter the data to only people count under those situations.")
     ),
     mainPanel(
-      plotOutput("barchart")  
+      plotOutput("barchart")
     )
   )
 )
 
 #third interactive
 interactive_3 <- tabPanel(
-  "Interactive",
+  "Scatterplot",
   p("The third interactive is planned to focus on how temperature affects the crowded the gym is."),
   plotOutput("scatterplot3",
              click = "plot_click",
@@ -141,14 +146,28 @@ interactive_3 <- tabPanel(
              hover = "plot_hover",
              brush = "plot_brush"
   ),
+  p("This tool allows the user to interact with the scatterplot and get information. Clicking or double clicking on any part
+     of the scatterplot will allow you to get and store the temperature and number of people at that point. Hovering over the scatterplot
+     will change depending on wherever the users cursor is. Than if the users holds and moves there cursor to brush a small,
+     the user will get the highest and lowest amount of people and temperature within the box."),
   verbatimTextOutput("gym_info")
 )
 
-summary_takeaways <- "temp 1"
+summary_takeaways <- "In the first chart, we wanted to analyze the amount of people that were at the gym at any given
+                      day or time. To demonstrate this, we decided that a heatmap. Looking at the heatmap, a user can pick
+                      any date and the times for that date, and find how busy the gym is. By looking at the date 12/7/2022,
+                      a user can see that the time around 5:00 pm would be the best time to go to avoid people."
 
-summary_takeaways_2 <- "temp 2"
+summary_takeaways_2 <- "The second chart was created with the intent to see if there were special parameters that increased
+                        or decreased the amount of people at the gym. By making a bar chart, we are able to see that the start
+                        of a semester has more people than during the semester. We can also see trends with holidays
+                        and weekends which can allow a user to see if how busy the gym is during special days."
 
-summary_takeaways_3 <- "temp 3"
+summary_takeaways_3 <- "The third chart was more focused on how temperature affects the activities levels of the gym. To
+                        help find out how it does, we created a scatterplot that alllows an user to look through the entire
+                        dataset themselves and see how busy the gym is at any given temperature. They can hold over 70 degrees
+                        and see that the person count could go over 100. But they can also see that as the temperature lowers
+                        less people go to the gym."
 
 #takeaway page
 takeaways <- tabPanel(
