@@ -173,6 +173,10 @@ report <- tabPanel(
   p(dataset_acknowledgement),
   h4("Limitations"),
   p(limitations),
+  h4("Findings"),
+  p(findings1),
+  p(findings2),
+  p(findings3),
   h4("Acknowledgments"),
   p(acknowledgement)
 )

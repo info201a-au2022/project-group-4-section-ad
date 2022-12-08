@@ -134,9 +134,9 @@ A second limitation is that there could be reasons beyond data for why people ma
 findings1 <- "Regarding the time of day and gym crowdiness, we found that the gym tends to be least busy in the morning. This may be due to the fact that college students generally sleep later and wake up later than other demographics, making it hard for them to attend the gym early. We found that the gym tends to get more and more busy getting closer to 5:00 PM, which was expected as that is when most students are finished with class. Gym attendance stays high throughout the night, only tapering down near the later hours when the gym is about to close.
 It is important to note, though, that gym attendance throughout a certain day is also affected by holidays and weekends - something that will be discussed later."
 
-findings2 <- ""
+findings2 <- "Our data shows that gym attendance drops during the holidays. This is understandable, as many people are on vacation during holidays and thus would not be able to attend the gym. Another important point to consider however, is that many gyms are closed over the holidays. While one might think that more people would attend the gym over the weekends when they have free time, our data shows that attendance actually drops over the weekends.This makes sense when considering the fact that many people treat the weekends as days of rest to either stay at home or go out and have fun."
 
-findings3 <- ""
+findings3 <- "Before discussing our findings for temperature, it is important to note that the campus gym of focus from the dataset we used sports higher temperatures year round. From the data we have, we can see a clear trend that low temperatures are correlated with lower gym attendance. This is understandable, as cold weather often discourages people from going outside. On the other hand, while gym attendance numbers are higher during days with hot weather, the days with highest gym attendance are days with mild temperature ratings. For the dataset in question, this means gym attendance is highest when temperature is close to 64 degrees. "
 
 acknowledgement <- "We would like to acknowledge Thomas Winegarden and Yubing Tian for being great instructors."
 
