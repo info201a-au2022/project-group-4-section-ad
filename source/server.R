@@ -16,7 +16,7 @@ library(gifski)
 library(shinycssloaders)
 library(thematic)
 
-gym_data <- read.csv("data.csv")
+gym_data <- read.csv("C:/Users/Phamily/Documents/info201/group project/project-group-7-section-ad/data/data.csv")
 
 server <- function(input, output) {
   thematic_shiny()
@@ -76,11 +76,21 @@ server <- function(input, output) {
   })
 
   # interactive 2
+  
+  test123 <- unique(gym_data$number_people)
+  
+  test321 <- gym_data %>%
+    select(is_holiday:is_weekend, -temperature) %>%
+    names() 
+  
   output$barchart <- renderPlot({
-        barplot(gym_data[,input$number_people], 
-            main=input$number_people,
-            ylab="Number of people",
-            xlab="temp")
+    data = gym_data %>%
+      filter(number_people %in% input$selects) %>%
+      select(one_of(c("number_people", input$selects2))) %>%
+      gather(is_holiday, is_weekend, -number_people)
+    
+    ggplot(data = data, aes(x = input$selects, y= input$selects2)) + 
+      geom_bar(aes(group = input$selects2, fill = input$selects2), stat = "identity", color = "light blue")
   })
   
   # interactive 3
@@ -94,18 +104,18 @@ server <- function(input, output) {
   output$gym_info <- renderText({
     xy_str <- function(e) {
       if(is.null(e)) return("NULL\n")
-      paste0("Number of people:", round(e$x, 1), "Temperature:", round(e$y, 1), "\n")
+      paste0("Number of people:", round(e$x, 1), "  Temperature:", round(e$y, 1), "\n")
     }
     xy_range_str <- function(e) {
       if(is.null(e)) return("NULL\n")
-      paste0("Lowest people count: ", round(e$xmin, 1), " Highest people count: ", round(e$xmax, 1),
-             " Lowest temperature count:", round(e$ymin, 1), " Highest temperature count:", round(e$ymax, 1))
+      paste0("Lowest people count: ", round(e$xmin, 1), "  Highest people count: ", round(e$xmax, 1),
+             " Lowest temperature count:", round(e$ymin, 1), "  Highest temperature count:", round(e$ymax, 1))
     }
     paste0(
-      "click: ", xy_str(input$plot_click),
-      "dblclick: ", xy_str(input$plot_dblclick),
-      "hover: ", xy_str(input$plot_hover),
-      "brush: ", xy_range_str(input$plot_brush)
+      "Click: ", xy_str(input$plot_click),
+      "Double Click: ", xy_str(input$plot_dblclick),
+      "Hover: ", xy_str(input$plot_hover),
+      "Brush: ", xy_range_str(input$plot_brush)
     )
   })
 

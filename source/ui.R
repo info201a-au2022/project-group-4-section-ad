@@ -107,16 +107,23 @@ interactive_1 <- tabPanel(
 )
 
 #second interactive
+
+test123 <- unique(gym_data$number_people)
+
+test321 <- gym_data %>%
+  select(is_holiday:is_during_semester) %>%
+  names() 
+
 interactive_2 <- tabPanel(
   "Interactive",
   p("The second interactive is planned to focus on the time of day and how busy the gym crowded the gym is"),
   titlePanel("Number of People"),
   sidebarLayout(      
     sidebarPanel(
-      selectInput("temperature", "Temperature:", 
-                  choices=colnames(gym_data)),
-      hr(),
-      helpText("Data from kaggle: Crowdedness at the Campus Gym")
+      selectInput(inputId = "selects", choices = test123,
+                  label = "Number of People:", multiple = TRUE),
+      selectInput(inputId = "selects2", choices = test321, label = "Select Attribute:",
+                  multiple = TRUE)
     ),
     mainPanel(
       plotOutput("barchart")  
