@@ -44,10 +44,8 @@ summary_takeaways <- "In the first chart, we wanted to analyze the amount of peo
                       a user can see that the time around 5:00 pm would be the best time to go to avoid people."
 
 summary_takeaways_2 <- "The second chart was created with the intent to see if there were special parameters that increased
-                        or decreased the amount of people at the gym. By making a bar chart, we are able to see that the start
-                        of a semester has more people than during the semester. We can also see trends with holidays
-                        and weekends which can allow a user to see if how busy the gym is during special days. An user
-                        can see that the gym is less busy during the quarter than at the start."
+                        or decreased the amount of people at the gym. By making a bar chart, we are able to see that the weekends has more people than during the semester. We can also see trends with holidays
+                        which can allow a user to see if how busy the gym is during special days."
 
 summary_takeaways_3 <- "The third chart was more focused on how temperature affects the activities levels of the gym. To
                         help find out how it does, we created a scatterplot that alllows an user to look through the entire
