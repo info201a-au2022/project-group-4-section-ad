@@ -23,7 +23,8 @@ source("chart_1.R")
 source("chart_2.R")
 source("chart_3.R")
 
-#Input Functions
+#--------------INPUT FUNCTIONS--------------
+
 user_date <- dateInput(
   inputId = "userdate",
   label = "Choose the date of interest",
@@ -52,10 +53,27 @@ user_time_max <- selectInput(
   selected = "12:00"
 )
 
+user_holiday <- selectInput(
+  inputId = "holiday",
+  label = "Holiday or not?",
+  choices = list("Yes", "No"),
+  selected = "No"
+)
+
+user_weekend <- selectInput(
+  inputId = "weekend",
+  label = "Weekend or not?",
+  choices = list("Yes", "No"),
+  selected = "No"
+)
+
+#--------------PAGES--------------
+
 #introduction page
 introduction <- tabPanel(
   "Introduction",
   imageOutput("home_pic"),
+  br(),
   titlePanel("How Crowded is the IMA?"),
   p(intro_blurb),
   br(),
@@ -73,17 +91,11 @@ interactive_1 <- tabPanel(
       br(),
       user_time_min,
       user_time_max,
-      p(int1_addendum)
+      p(int1_description2)
     ),
     mainPanel(plotOutput("heatmap"), plotOutput("selectheatmap"))
   )
 )
-
-test123 <- unique(gym_data$number_people)
-
-test321 <- gym_data %>%
-  select(is_holiday:is_during_semester) %>%
-  names() 
 
 #second interactive
 interactive_2 <- tabPanel(
@@ -91,12 +103,10 @@ interactive_2 <- tabPanel(
   titlePanel("Number of People"),
   sidebarLayout(
     sidebarPanel(
-      selectInput(inputId = "selects", choices = test123,
-                  label = "Number of People:", multiple = TRUE),
+      user_holiday,
+      user_weekend,
       p(int2_description),
-      selectInput(inputId = "selects2", choices = test321, label = "Select Attribute:",
-                  multiple = TRUE),
-      p(int2_description2)
+      p(int2_addendum),
     ),
     mainPanel(
       plotOutput("barchart")
@@ -122,6 +132,8 @@ interactive_3 <- tabPanel(
 takeaways <- tabPanel(
   "Takeaways",
   h2("Takeaways"),
+  br(),
+  imageOutput("pic"),
   h3("Heatmap:"),
   p(summary_takeaways),
   h3("Bar Chart:"),
@@ -177,8 +189,16 @@ report <- tabPanel(
   p(findings1),
   p(findings2),
   p(findings3),
+  h4("Discussion"),
+  p(discussion),
+  h4("Conclusion"),
+  p(conclusion),
   h4("Acknowledgments"),
-  p(acknowledgement)
+  p(acknowledgement),
+  h4("References"),
+  p(reference1),
+  p(reference2),
+  p(reference3)
 )
 
 #ui put together

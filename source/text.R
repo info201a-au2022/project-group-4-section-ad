@@ -11,32 +11,26 @@ optimal time to work out for maximum efficiency."
 data_set_description <- "Our dataset contains gym population attendance overtime at another large public university
 on the west coast of America. The data includes other observations such as temperature, season, weather conditions,
 holiday, etc... Our project is focused on analyzing how different factors affect gym attendance
-in order to ultimately provide gym-goers with better times to go to the gym, as well as provide newcomers a
+in order to ultimately provide gym-goers with better times to go to the gym, as well as provide newcomers a 
 welcoming space to get started."
 
 #INTERACTIVE 1
 
-int1_intro <- "The first interactive focuses on the time of day and how busy the gym crowded the gym is"
-
 int1_description <- "Using this tool, users can pick any date within the next year and receive an approximation of how busy the gym will be per hour.
 In general, it is best to go during mornings with numbers picking up closer to 5 PM and staying busy throughout the night. "
 
-int1_addendum <- "Additionally, users can pick a time range within the day that they have chosen in order to receive a filtered view of only
+int1_description2 <- "Additionally, users can pick a time range within the day that they have chosen in order to receive a filtered view of only
 times that are applicable to them. To better display the difference in attendance per hour, the newly displayed plot is a barchart with heatmap elements."
 
 #INTERACTIVE 2
 
-int2_intro <- "The first interactive focuses on the time of day and how busy the gym crowded the gym is"
+int2_description <- "Using this tool, users can filter data and find out how holiday and weekends affect gym status,
+both separately and together."
 
-int2_description <- "Using this tool, users can pick any number of people that is within the dataset and recieve the occurence
-         of that number of people for that specfic type of day. In general, it is best to go for numbers of people
-        that occur more often for example 40."
-int2_description2 <- "This tool allows users to pick what type of special situation is happening. Depending on what siutaiton the
-         user wants to see, it will filter the data to only people count under those situations."
+int2_addendum <- "IMPORTANT: There is no available gym data for days that are both holidays and weekends.
+It is best to assume that the IMA is closed on a weekend holiday."
 
 #INTERACTIVE 3
-
-int3_intro <- "The third interactive focuses on how temperature affects the crowded the gym is."
 
 int3_description <- "This tool allows the user to interact with the scatterplot and get information. Clicking or double clicking on any part
      of the scatterplot will allow you to get and store the temperature and number of people at that point. Hovering over the scatterplot
@@ -69,18 +63,18 @@ affiliation <- "INFO-201: Technical Foundations of Informatics - The Information
 
 report_date <- "Autumn 2022"
 
-abstract <- "Our main question is how do external factors affect people's willingness to go
-to the gym. This question is important because in order to make gym-going easier, we want to
+abstract <- "Our main question is how do external factors affect people's willingness to go 
+to the gym. This question is important because in order to make gym-going easier, we want to 
 provide newcomers times to go to the gym when crowdiness is at its least. To address this question,
 we will perform an analysis on teamperature, weather, seasons, time, and their relationship on
 gym crowdiness."
 
 keywords <- "Gym, fitness, foot traffic "
 
-report_introduction <- "The Intramural Activities building (IMA)  is one of many great resources offered to students
+report_introduction <- "The Intramural Activities building (IMA)  is one of many great resources offered to students 
 attending the University of Washington. Although the IMA is free, many students still do not take full advantage
 of the facility due to the intimidating environment that surrounds the building. Our goal with this project is
-to make going to the IMA easier for students who are looking to start working out. We plan to primarily address
+to make going to the IMA easier for students who are looking to start working out. We plan to primarily address 
 this issue by analyzing a dataset (https://www.kaggle.com/datasets/nsrose7224/crowdedness-at-the-campus-gym?datasetId=527)
 that tracks crowdiness at a campus gym."
 
@@ -93,7 +87,7 @@ and provided to students to find a good time to go to the gym when crowdiness is
 values <- "The main value our project is revolved around is gym accesibility. People often want to start going to the gym,
 yet according to a survey done by better.org, almost 20% of people who don't go to the gym due to confidence issues.
 Our goal is to provide people with a time where the gym is least busy, thus allowing for a more private workout. Additionally,
-our secondary value is to focus on timeliness. According to better.org, the leading barrier to going to the gym for many people
+our secondary value is to focus on timeliness. According to better.org, the leading barrier to going to the gym for many people 
 is timeliness, with almost 40% of people choosing this option. By providing people with times during which the IMA has the least
 amount of people, we hope to help people speed up their workouts."
 
@@ -107,7 +101,7 @@ benefits <- "One benefit to our project is that it will help people find better 
 
 question_1 <- "Is there a relationship between time of day and gym crowdiness?"
 
-question_1_description <- "Each day comes with different commitments - people may be busy with class and commitments one day, but have nothing on the weekends. We want to see whether there are big differences in the amount of people at the gym at
+question_1_description <- "Each day comes with different commitments - people may be busy with class and commitments one day, but have nothing on the weekends. We want to see whether there are big differences in the amount of people at the gym at 
 different times with the goal of finding the best time to go to the gym per day."
 
 question_2 <- "How does temperature affect people’s willingness to go to the gym?"

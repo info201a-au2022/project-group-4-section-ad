@@ -139,21 +139,33 @@ server <- function(input, output) {
   })
   
   #interactive 2
-  
-  test123 <- unique(gym_data$number_people)
-  
-  test321 <- gym_data %>%
-    select(is_holiday:is_weekend, -temperature) %>%
-    names() 
-  
   output$barchart <- renderPlot({
-    data = gym_data %>%
-      filter(number_people %in% input$selects) %>%
-      select(one_of(c("number_people", input$selects2))) %>%
-      gather(is_holiday, is_weekend, -number_people)
+    bardata <- gym_data %>%
+      mutate(
+        date = as.Date(date)
+      ) %>%
+      filter(if (input$holiday == "Yes") is_holiday == 1 else is_holiday == 0) %>%
+      filter(if (input$weekend == "Yes") is_weekend == 1 else is_weekend == 0) %>%
+      group_by(hour) %>%
+      summarise(
+        number_people = mean(number_people)
+      ) %>%
+      mutate(
+        hour = paste0(hour, ":00")
+      )
     
-    ggplot(data = data, aes(x = input$selects, y= input$selects2)) + 
-      geom_bar(aes(group = input$selects2, fill = input$selects2), stat = "identity", color = "light blue")
+    #reorders barchart x axis data into ascending hour order
+    bardata$hour <- factor(bardata$hour, levels = hours_ascending)
+    
+    #plots bargraph of average hourly attendance for holiday and weekend data
+    bargraph <- ggplot(bardata) +
+      geom_bar(mapping = aes(x = hour, y = number_people, fill = number_people), stat = "identity") + 
+      guides(color = FALSE) +
+      xlab("Time") +
+      ylab("Number of People") + 
+      labs(fill = "Foot Traffic") +
+      scale_fill_gradient(low = "black", high = "black")
+    bargraph
   })
   
   #interactive 3
@@ -182,6 +194,12 @@ server <- function(input, output) {
   
   #Renders home banner image
   output$home_pic <- renderImage({
-    list(src = "www/banner2.png", width = "100%", height = 370)
+    list(src = "www/banner_sharpened.png", width = "100%", height = 400)
   }, deleteFile = F)
+  
+  #Renders home banner image
+  output$pic <- renderImage({
+    list(src = "www/pic.jpg", width = 500, height = 370)
+  }, deleteFile = F)
+
 }
