@@ -2,8 +2,9 @@
 
 intro_blurb <- "Have you ever wanted to get into working out, but always thought that the IMA was too intimidating?
 According to the New York post, almost 50% of Americans are intimidated by the prospect of working out
-at a public gym. This project seeks to alleviate this issue for University of Washington students by answering the following question: How many people
-are at the IMA at any given time? To answer this question, we are analyzing data gathered on how crowded Berkeley's campus gym is throughout the year.
+at a public gym. This project seeks to alleviate this issue for University of Washington students by answering the following questions:
+
+intro_blurb2 <-"To answer these questions, we are analyzing data gathered on how crowded Berkeley's campus gym is throughout the year.
 We hope that by answering this topic, we're able to help students new to the IMA find less crowded times
 to workout and get started. Additionally, even seasoned gym-goers will be able to use our project to find the
 optimal time to work out for maximum efficiency."
