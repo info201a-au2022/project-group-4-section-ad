@@ -11,7 +11,7 @@ optimal time to work out for maximum efficiency."
 data_set_description <- "Our dataset contains gym population attendance overtime at another large public university
 on the west coast of America. The data includes other observations such as temperature, season, weather conditions,
 holiday, etc... Our project is focused on analyzing how different factors affect gym attendance
-in order to ultimately provide gym-goers with better times to go to the gym, as well as provide newcomers a 
+in order to ultimately provide gym-goers with better times to go to the gym, as well as provide newcomers a
 welcoming space to get started."
 
 #INTERACTIVE 1
@@ -69,18 +69,18 @@ affiliation <- "INFO-201: Technical Foundations of Informatics - The Information
 
 report_date <- "Autumn 2022"
 
-abstract <- "Our main question is how do external factors affect people's willingness to go 
-to the gym. This question is important because in order to make gym-going easier, we want to 
+abstract <- "Our main question is how do external factors affect people's willingness to go
+to the gym. This question is important because in order to make gym-going easier, we want to
 provide newcomers times to go to the gym when crowdiness is at its least. To address this question,
 we will perform an analysis on teamperature, weather, seasons, time, and their relationship on
 gym crowdiness."
 
 keywords <- "Gym, fitness, foot traffic "
 
-report_introduction <- "The Intramural Activities building (IMA)  is one of many great resources offered to students 
+report_introduction <- "The Intramural Activities building (IMA)  is one of many great resources offered to students
 attending the University of Washington. Although the IMA is free, many students still do not take full advantage
 of the facility due to the intimidating environment that surrounds the building. Our goal with this project is
-to make going to the IMA easier for students who are looking to start working out. We plan to primarily address 
+to make going to the IMA easier for students who are looking to start working out. We plan to primarily address
 this issue by analyzing a dataset (https://www.kaggle.com/datasets/nsrose7224/crowdedness-at-the-campus-gym?datasetId=527)
 that tracks crowdiness at a campus gym."
 
@@ -93,7 +93,7 @@ and provided to students to find a good time to go to the gym when crowdiness is
 values <- "The main value our project is revolved around is gym accesibility. People often want to start going to the gym,
 yet according to a survey done by better.org, almost 20% of people who don't go to the gym due to confidence issues.
 Our goal is to provide people with a time where the gym is least busy, thus allowing for a more private workout. Additionally,
-our secondary value is to focus on timeliness. According to better.org, the leading barrier to going to the gym for many people 
+our secondary value is to focus on timeliness. According to better.org, the leading barrier to going to the gym for many people
 is timeliness, with almost 40% of people choosing this option. By providing people with times during which the IMA has the least
 amount of people, we hope to help people speed up their workouts."
 
@@ -107,7 +107,7 @@ benefits <- "One benefit to our project is that it will help people find better 
 
 question_1 <- "Is there a relationship between time of day and gym crowdiness?"
 
-question_1_description <- "Each day comes with different commitments - people may be busy with class and commitments one day, but have nothing on the weekends. We want to see whether there are big differences in the amount of people at the gym at 
+question_1_description <- "Each day comes with different commitments - people may be busy with class and commitments one day, but have nothing on the weekends. We want to see whether there are big differences in the amount of people at the gym at
 different times with the goal of finding the best time to go to the gym per day."
 
 question_2 <- "How does temperature affect people’s willingness to go to the gym?"
@@ -137,6 +137,14 @@ It is important to note, though, that gym attendance throughout a certain day is
 findings2 <- "Our data shows that gym attendance drops during the holidays. This is understandable, as many people are on vacation during holidays and thus would not be able to attend the gym. Another important point to consider however, is that many gyms are closed over the holidays. While one might think that more people would attend the gym over the weekends when they have free time, our data shows that attendance actually drops over the weekends.This makes sense when considering the fact that many people treat the weekends as days of rest to either stay at home or go out and have fun."
 
 findings3 <- "Before discussing our findings for temperature, it is important to note that the campus gym of focus from the dataset we used sports higher temperatures year round. From the data we have, we can see a clear trend that low temperatures are correlated with lower gym attendance. This is understandable, as cold weather often discourages people from going outside. On the other hand, while gym attendance numbers are higher during days with hot weather, the days with highest gym attendance are days with mild temperature ratings. For the dataset in question, this means gym attendance is highest when temperature is close to 64 degrees. "
+
+discussion <- "The findings of this project are relevant as it can solve one of the big issues that people have with going to the gym. Our group expects that the findings if this project will help convince those who were hesitant to workout and/or get started to starting going to the gym. Although there might be more things stopping someone from going to the gym than crowdedness, solving one issue can help alleviate some issues. The importance of our first finding is that it solves what time is better to avoid people at the gym. Since the morning or near closing is when the gym has the lowest, it sets a time standard that people can build their schedule around if they want to go to the gym. Helping people build a schedule can help people waste less time or have less uncertainty in their own life. Waiting on equipment or leaving extra time for those type of issues can demotivate someone from going to the gym.
+                For our second finding, it determines whether or not someone should go to the gym during a certain period or event. One surprising one for many people is that usually less people go to the gym on weekends which could help motivate someone to go to the gym if they want to avoid people. There's also less people going to the gym as the quarter progresses which could help motivate someone too. For the third finding, knowing the general amount of people for each temperature can help someone decide whether they want to go the gym or not. If they know the temperature is around 65 degrees, than they know the gym should be pretty active while on the other hand if they know the temperature is around 40, than they know less people are at the gym. We expect these findings to help motivate people to help people start going to the gym. And if someone is
+               already going to the gym, we hope that it could help balance out and make the gym less crowdy at certain times for everyone. Helping balance out the gym crowdedness will help reduce people standing around and wasting time waiting on equipment. This can increase efficiency not only for the people working out but the gym too. We hope these findings are presented to people that have access to the IMA to encourage them to start using the facility if they do not already. "
+
+conclusion <- "The IMA (Intramural Activities Building) is University of Washingtons premeir recreation center that all students have access to. But for many, the gym can be intimidating as most people are scared to work out in a public gym. So to solve this issue, our group worked to solve and alleieveate the gym crowdedness issue that many face. To do this, we started looking for factors that contributed to people going to the gym more or less while still keeping in mind our local area. We attained gym activites level from another public university (UC Berkely) and worked to mitigate the difference to relate it to our school as much as possibile. With that, we then begun a data analysis seeking for core topics that affect gym crowdedndess. Where we were left out were key ideas like time, day, temperature, and the type of day. These key ideas were than organized into charts where we found the important pieces for each of them.
+               We found out that the gym is least crowded in the morning and near closing. We also found out that periods like deeper in the semester or the weekend usually have less people going to the gym. Along with how lower or higher temperature away from mild usually have less people. These important ideas can help someone new go to the gym to avoid crowdedness. And if someone is already going to the IMA, than it can help them find a time to avoid people and make the gym more balanced in people during all times. Doing this allows less people to have to wait for equipment which can help the gym and the people going to the gym. People going to the gym don't necessairly even have to go at the lowest times as the data also shows times when the gym has the most people. This can allow people to choose a time while it might not be the lowest, but still have less people and still work with their schedule.
+               Allowing people to fit the gym into the schedule can lead to more people going to the gym. This is a big issue with all of the work university students have since they have to worry about there classes if not other things like a job. Helping alleivate this issue with gym crowdedness help remove one issue out of the many that univeristy students have. In conclusion, our group found that there are certain times, periods, and settings where the gym is less crowded which can help motivated people to start going to the gym or keep going to the gym."
 
 acknowledgement <- "We would like to acknowledge Thomas Winegarden and Yubing Tian for being great instructors."
 
