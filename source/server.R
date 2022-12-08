@@ -140,6 +140,8 @@ server <- function(input, output) {
   
   #interactive 2
   output$barchart <- renderPlot({
+    
+    #dataframe filtered depending on whether user indicated if it was a holiday and if it was a weekend
     bardata <- gym_data %>%
       mutate(
         date = as.Date(date)
@@ -197,7 +199,7 @@ server <- function(input, output) {
     list(src = "www/banner_sharpened.png", width = "100%", height = 400)
   }, deleteFile = F)
   
-  #Renders home banner image
+  #Renders takeaway image
   output$pic <- renderImage({
     list(src = "www/pic.jpg", width = 500, height = 370)
   }, deleteFile = F)

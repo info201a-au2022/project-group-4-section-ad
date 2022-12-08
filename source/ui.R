@@ -22,6 +22,7 @@ source("text.R")
 
 #--------------INPUT FUNCTIONS--------------
 
+#asks user for date of interest
 user_date <- dateInput(
   inputId = "userdate",
   label = "Choose the date of interest",
@@ -30,6 +31,7 @@ user_date <- dateInput(
   max = "2023-12-05"
 )
 
+#asks user for earliest time available
 user_time_min <- selectInput(
   inputId = "early",
   label = "Input earliest time available in 24 hour time (Format: XX:XX)",
@@ -40,6 +42,7 @@ user_time_min <- selectInput(
   selected = "07:00"
 )
 
+#asks user for latest time available
 user_time_max <- selectInput(
   inputId = "late",
   label = "Input latest time available in 24 hour time (Format: XX:XX)",
@@ -50,6 +53,7 @@ user_time_max <- selectInput(
   selected = "12:00"
 )
 
+#asks user whether it is a holiday or not
 user_holiday <- selectInput(
   inputId = "holiday",
   label = "Holiday or not?",
@@ -57,6 +61,7 @@ user_holiday <- selectInput(
   selected = "No"
 )
 
+#asks user whether it is a weekend or not
 user_weekend <- selectInput(
   inputId = "weekend",
   label = "Weekend or not?",
