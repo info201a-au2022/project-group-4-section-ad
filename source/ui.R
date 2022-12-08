@@ -127,7 +127,7 @@ interactive_3 <- tabPanel(
              brush = "plot_brush"
   ),
   p(int3_description),
-  verbatimTextOutput("gym_info")
+  verbatimTextOutput("info")
   )
 
 #takeaway page
