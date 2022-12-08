@@ -138,10 +138,13 @@ takeaways <- tabPanel(
   imageOutput("pic"),
   h3("Heatmap:"),
   p(summary_takeaways),
+  p(findings1),
   h3("Bar Chart:"),
   p(summary_takeaways_2),
+  p(findings2),
   h3("Scatterplot:"),
   p(summary_takeaways_3),
+  p(findings3)
 )
 
 #report page
