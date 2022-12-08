@@ -16,32 +16,14 @@ library(gifski)
 library(lubridate)
 library(shinycssloaders)
 library(thematic)
+library(shinythemes)
 
+source("text.R")
 source("chart_1.R")
 source("chart_2.R")
 source("chart_3.R")
 
-intro_blurb <- "Have you ever wanted to get into working out, but always thought that the IMA was too intimidating?
-According to the New York post, almost 50% of Americans are intimidated by the prospect of working out
-at a public gym. This project seeks to alleviate this issue for University of Washington students by answering the following question: How many people
-are at the IMA at any given time? To answer this question, we are analyzing data gathered on how crowded Berkeley's campus gym is throughout the year.
-We hope that by answering this topic, we're able to help students new to the IMA find less crowded times
-to workout and get started. Additionally, even seasoned gym-goers will be able to use our project to find the
-optimal time to work out for maximum efficiency."
-
-authors <- "David Pham, Justin Dong"
-
-affiliation <- "INFO-201: Technical Foundations of Informatics - The Information School - University of Washington"
-
-research_question <- "Does temperature affect how busy the gym is?
-                      Does an holiday or special event affect how busy the gym is?
-                      How busy is the gym during each day of the week?"
-
-data_set <- "This dataset is Crowdedness at the Campus Gym (https://www.kaggle.com/datasets/nsrose7224/crowdedness-at-the-campus-gym).
-             Our dataset contains information from UC Berkeley on how crowded their gym is at a certain time
-             and information during that time that includes temperature, day of week, and relation to holiday.
-             The dataset marks the information every 10 minutes and contains over 60,000 lines.This dataset was made 2016 and
-             consisted of about 26,000 people."
+#Input Functions
 user_date <- dateInput(
   inputId = "userdate",
   label = "Choose the date of interest",
@@ -53,82 +35,68 @@ user_date <- dateInput(
 user_time_min <- selectInput(
   inputId = "early",
   label = "Input earliest time available in 24 hour time (Format: XX:XX)",
-  choices = list("0:00", "1:00", "2:00", "3:00", "4:00", "5:00", "6:00",
+  choices = list("0:00", "1:00", "2:00", "3:00", "4:00", "5:00", "6:00", 
                  "7:00", "8:00", "9:00", "10:00", "11:00", "12:00", "13:00",
                  "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00",
-                 "21:00", "22:00", "23:00", "24:00"),
-  selected = "05:00"
+                 "21:00", "22:00", "23:00"),
+  selected = "07:00"
 )
 
 user_time_max <- selectInput(
   inputId = "late",
   label = "Input latest time available in 24 hour time (Format: XX:XX)",
-  choices = list("0:00", "1:00", "2:00", "3:00", "4:00", "5:00", "6:00",
+  choices = list("0:00", "1:00", "2:00", "3:00", "4:00", "5:00", "6:00", 
                  "7:00", "8:00", "9:00", "10:00", "11:00", "12:00", "13:00",
                  "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00",
-                 "21:00", "22:00", "23:00", "24:00"),
+                 "21:00", "22:00", "23:00"),
   selected = "12:00"
 )
 
 #introduction page
 introduction <- tabPanel(
   "Introduction",
-  titlePanel("How Crowded is the IMA?"),
-  h3("Authors"),
-  p(authors),
-  h3("Affiliation"),
-  p(affiliation),
-  h3("Intro"),
   imageOutput("home_pic"),
+  titlePanel("How Crowded is the IMA?"),
   p(intro_blurb),
-  h3("Research Questions"),
-  p(research_question),
-  h3("Dataset"),
-  p(data_set)
+  br(),
+  p(data_set_description)
 )
 
 #first interactive
 interactive_1 <- tabPanel(
-  "Heatmap",
-  h3("How busy is the gym on any given day?"),
+  "Heat Map",
+  titlePanel("How busy is the gym on any given day?"),
   sidebarLayout(
     sidebarPanel(
       user_date,
-      p("Using this tool, users can pick any date within the next year and receive an approximation of how busy the gym will be per hour.
-        In general, it is best to go during mornings with numbers picking up closer to 5 PM and staying busy throughout the night. "),
+      p(int1_description),
       br(),
       user_time_min,
       user_time_max,
-      p("Additionally, users can pick a time range within the day that they have chosen in order to receive a filtered view of only
-        times that are applicable to them.")
+      p(int1_addendum)
     ),
     mainPanel(plotOutput("heatmap"), plotOutput("selectheatmap"))
   )
 )
 
-#second interactive
-
 test123 <- unique(gym_data$number_people)
 
 test321 <- gym_data %>%
   select(is_holiday:is_during_semester) %>%
-  names()
+  names() 
 
+#second interactive
 interactive_2 <- tabPanel(
   "Barchart",
-  p("The second interactive is planned to focus on the time of day and how busy the gym crowded the gym is"),
   titlePanel("Number of People"),
   sidebarLayout(
     sidebarPanel(
       selectInput(inputId = "selects", choices = test123,
                   label = "Number of People:", multiple = TRUE),
-      p("Using this tool, users can pick any number of people that is within the dataset and recieve the occurence
-         of that number of people for that specfic type of day. In general, it is best to go for numbers of people
-        that occur more often for example 40."),
+      p(int2_description),
       selectInput(inputId = "selects2", choices = test321, label = "Select Attribute:",
                   multiple = TRUE),
-      p("This tool allows users to pick what type of special situation is happening. Depending on what siutaiton the
-         user wants to see, it will filter the data to only people count under those situations.")
+      p(int2_description2)
     ),
     mainPanel(
       plotOutput("barchart")
@@ -139,41 +107,21 @@ interactive_2 <- tabPanel(
 #third interactive
 interactive_3 <- tabPanel(
   "Scatterplot",
-  p("The third interactive is planned to focus on how temperature affects the crowded the gym is."),
+  titlePanel("How does temperature affect gym attendance?"),
   plotOutput("scatterplot3",
              click = "plot_click",
              dblclick = "plot_dblclick",
              hover = "plot_hover",
              brush = "plot_brush"
   ),
-  p("This tool allows the user to interact with the scatterplot and get information. Clicking or double clicking on any part
-     of the scatterplot will allow you to get and store the temperature and number of people at that point. Hovering over the scatterplot
-     will change depending on wherever the users cursor is. Than if the users holds and moves there cursor to brush a small,
-     the user will get the highest and lowest amount of people and temperature within the box."),
+  p(int3_description),
   verbatimTextOutput("gym_info")
-)
-
-summary_takeaways <- "In the first chart, we wanted to analyze the amount of people that were at the gym at any given
-                      day or time. To demonstrate this, we decided that a heatmap. Looking at the heatmap, a user can pick
-                      any date and the times for that date, and find how busy the gym is. By looking at the date 12/7/2022,
-                      a user can see that the time around 5:00 pm would be the best time to go to avoid people."
-
-summary_takeaways_2 <- "The second chart was created with the intent to see if there were special parameters that increased
-                        or decreased the amount of people at the gym. By making a bar chart, we are able to see that the start
-                        of a semester has more people than during the semester. We can also see trends with holidays
-                        and weekends which can allow a user to see if how busy the gym is during special days. An user
-                        can see that the gym is less busy during the quarter than at the start."
-
-summary_takeaways_3 <- "The third chart was more focused on how temperature affects the activities levels of the gym. To
-                        help find out how it does, we created a scatterplot that alllows an user to look through the entire
-                        dataset themselves and see how busy the gym is at any given temperature. They can hold over 70 degrees
-                        and see that the person count could go over 100. But they can also see that as the temperature lowers
-                        less people go to the gym."
+  )
 
 #takeaway page
 takeaways <- tabPanel(
   "Takeaways",
-  h2("Takeaways:"),
+  h2("Takeaways"),
   h3("Heatmap:"),
   p(summary_takeaways),
   h3("Bar Chart:"),
@@ -184,12 +132,54 @@ takeaways <- tabPanel(
 
 #report page
 report <- tabPanel(
-  "Report"
+  "Report",
+  titlePanel("Gym Crowdiness at the Campus Gym"),
+  h4("Authors"),
+  p(authors),
+  h4("Affiliation"),
+  p(affiliation),
+  h4("Date"),
+  p(report_date),
+  h4("Abstract"),
+  p(abstract),
+  h4("Keywords"),
+  p(keywords),
+  h4("Introduction"),
+  p(report_introduction),
+  p(report_introduction_2),
+  h4("Problem Domain"),
+  h5("Values"),
+  p(values),
+  h5("Direct Stakeholders"),
+  p(direct_stakeholders),
+  h5("Indirect Stakeholders"),
+  p(indirect_stakeholders),
+  h5("Harms"),
+  p(harms),
+  h5("Benefits"),
+  p(benefits),
+  h4("Research Questions"),
+  h5(question_1),
+  p(question_1_description),
+  h5(question_2),
+  p(question_2_description),
+  h5(question_3),
+  p(question_3_description),
+  h4("Dataset"),
+  p(dataset1),
+  p(dataset2),
+  p(dataset3),
+  p(dataset4),
+  p(dataset_acknowledgement),
+  h4("Limitations"),
+  p(limitations),
+  h4("Acknowledgments"),
+  p(acknowledgement)
 )
 
 #ui put together
 ui <- navbarPage(
-  theme = bslib::bs_theme(bootswatch = "darkly"),
+  theme = shinytheme("cosmo"),
   "Crowdedness At the IMA",
   introduction,
   interactive_1,

@@ -1,0 +1,147 @@
+# INTRODUCTION
+
+intro_blurb <- "Have you ever wanted to get into working out, but always thought that the IMA was too intimidating?
+According to the New York post, almost 50% of Americans are intimidated by the prospect of working out
+at a public gym. This project seeks to alleviate this issue for University of Washington students by answering the following question: How many people
+are at the IMA at any given time? To answer this question, we are analyzing data gathered on how crowded Berkeley's campus gym is throughout the year.
+We hope that by answering this topic, we're able to help students new to the IMA find less crowded times
+to workout and get started. Additionally, even seasoned gym-goers will be able to use our project to find the
+optimal time to work out for maximum efficiency."
+
+data_set_description <- "Our dataset contains gym population attendance overtime at another large public university
+on the west coast of America. The data includes other observations such as temperature, season, weather conditions,
+holiday, etc... Our project is focused on analyzing how different factors affect gym attendance
+in order to ultimately provide gym-goers with better times to go to the gym, as well as provide newcomers a 
+welcoming space to get started."
+
+#INTERACTIVE 1
+
+int1_intro <- "The first interactive focuses on the time of day and how busy the gym crowded the gym is"
+
+int1_description <- "Using this tool, users can pick any date within the next year and receive an approximation of how busy the gym will be per hour.
+In general, it is best to go during mornings with numbers picking up closer to 5 PM and staying busy throughout the night. "
+
+int1_addendum <- "Additionally, users can pick a time range within the day that they have chosen in order to receive a filtered view of only
+times that are applicable to them. To better display the difference in attendance per hour, the newly displayed plot is a barchart with heatmap elements."
+
+#INTERACTIVE 2
+
+int2_intro <- "The first interactive focuses on the time of day and how busy the gym crowded the gym is"
+
+int2_description <- "Using this tool, users can pick any number of people that is within the dataset and recieve the occurence
+         of that number of people for that specfic type of day. In general, it is best to go for numbers of people
+        that occur more often for example 40."
+int2_description2 <- "This tool allows users to pick what type of special situation is happening. Depending on what siutaiton the
+         user wants to see, it will filter the data to only people count under those situations."
+
+#INTERACTIVE 3
+
+int3_intro <- "The third interactive focuses on how temperature affects the crowded the gym is."
+
+int3_description <- "This tool allows the user to interact with the scatterplot and get information. Clicking or double clicking on any part
+     of the scatterplot will allow you to get and store the temperature and number of people at that point. Hovering over the scatterplot
+     will change depending on wherever the users cursor is. Than if the users holds and moves there cursor to brush a small,
+     the user will get the highest and lowest amount of people and temperature within the box."
+
+#TAKEAWAYS
+summary_takeaways <- "In the first chart, we wanted to analyze the amount of people that were at the gym at any given
+                      day or time. To demonstrate this, we decided that a heatmap would be best. Looking at the heatmap, a user can pick
+                      any date and the times for that date, and find how busy the gym is. By looking at the date 12/7/2022,
+                      a user can see that the time around 5:00 pm would be the best time to go to avoid people."
+
+summary_takeaways_2 <- "The second chart was created with the intent to see if there were special parameters that increased
+                        or decreased the amount of people at the gym. By making a bar chart, we are able to see that the start
+                        of a semester has more people than during the semester. We can also see trends with holidays
+                        and weekends which can allow a user to see if how busy the gym is during special days. An user
+                        can see that the gym is less busy during the quarter than at the start."
+
+summary_takeaways_3 <- "The third chart was more focused on how temperature affects the activities levels of the gym. To
+                        help find out how it does, we created a scatterplot that alllows an user to look through the entire
+                        dataset themselves and see how busy the gym is at any given temperature. They can hold over 70 degrees
+                        and see that the person count could go over 100. But they can also see that as the temperature lowers
+                        less people go to the gym."
+
+#REPORT
+
+authors <- "This project was made by Justin Dong and David Phan"
+
+affiliation <- "INFO-201: Technical Foundations of Informatics - The Information School - University of Washington"
+
+report_date <- "Autumn 2022"
+
+abstract <- "Our main question is how do external factors affect people's willingness to go 
+to the gym. This question is important because in order to make gym-going easier, we want to 
+provide newcomers times to go to the gym when crowdiness is at its least. To address this question,
+we will perform an analysis on teamperature, weather, seasons, time, and their relationship on
+gym crowdiness."
+
+keywords <- "Gym, fitness, foot traffic "
+
+report_introduction <- "The Intramural Activities building (IMA)  is one of many great resources offered to students 
+attending the University of Washington. Although the IMA is free, many students still do not take full advantage
+of the facility due to the intimidating environment that surrounds the building. Our goal with this project is
+to make going to the IMA easier for students who are looking to start working out. We plan to primarily address 
+this issue by analyzing a dataset (https://www.kaggle.com/datasets/nsrose7224/crowdedness-at-the-campus-gym?datasetId=527)
+that tracks crowdiness at a campus gym."
+
+report_introduction_2 <- "In order to effectively provide students a comprehensive idea of when good times to go to
+the gym are, we’ll pull data of crowdiness at different times by weekday, with exceptions on holidays. Seeing as how
+the University gym (Brekeley) in the dataset is of a very similar size, crowdedness is assumed to be similar in number.
+Additional segmentations for the dataset includes weather, seasons, and temperature. All of this data will be analyzed
+and provided to students to find a good time to go to the gym when crowdiness is at it’s minimum."
+
+values <- "The main value our project is revolved around is gym accesibility. People often want to start going to the gym,
+yet according to a survey done by better.org, almost 20% of people who don't go to the gym due to confidence issues.
+Our goal is to provide people with a time where the gym is least busy, thus allowing for a more private workout. Additionally,
+our secondary value is to focus on timeliness. According to better.org, the leading barrier to going to the gym for many people 
+is timeliness, with almost 40% of people choosing this option. By providing people with times during which the IMA has the least
+amount of people, we hope to help people speed up their workouts."
+
+direct_stakeholders <- "Direct stakeholders in our project are people who want to go to the campus gym and workout but do not have the confidence to. They would directly use our project to find out times when they can go and not be intimidated by a big crowd at the gym. Additionally, another direct stakeholder in our project are people who want to go to the gym but do not have enough time. They would use our project to find good times to go to the gym and get a fast work out in. "
+
+indirect_stakeholders <- "The indirect stakeholders in our project are people who go to the campus gym in general, as although they may have plenty of time and no issues going to the gym, our project is collecting data on them in order to provide an analysis."
+
+harms <- "One issue with our project is that it may lead to more crowding in the gym during times where foot traffic has historically been low. This is due to our project recommending the same time for a particular day as the least busy for everyone using our project. This would lead to our project working against its own goal. A workaround to this would be to update data as our project is being used, and accordingly spread people out."
+
+benefits <- "One benefit to our project is that it will help people find better times to go to the gym. Whether it be people who do not have the confidence to go to a crowded gym or people who have no time to spare, the project can benefit everyone who goes to the gym."
+
+question_1 <- "Is there a relationship between time of day and gym crowdiness?"
+
+question_1_description <- "Each day comes with different commitments - people may be busy with class and commitments one day, but have nothing on the weekends. We want to see whether there are big differences in the amount of people at the gym at 
+different times with the goal of finding the best time to go to the gym per day."
+
+question_2 <- "How does temperature affect people’s willingness to go to the gym?"
+
+question_2_description <- "Weather condition is an important factor when people decide to go outside or not, and going to the IMA is no exception. We want to see if there is a connection between harsh weather and gym attendance with the goal of specifically establishing a trend in temperature and attendance."
+
+question_3 <- "Do weekends and holidays affect gym traffic?"
+
+question_3_description <- "Holidays and seasons may have an effect on gym attendance - an example of this would be a spike in gym traffic following New Year or a dip in gym traffic during Thanksgiving break. We want to find out whether holidays affect gym attendance and on an even broader scale, whether different seasons have varying attendance levels."
+
+dataset1 <- "The first dataset we have is from UC Berkeley relating to their gym crowding during the school year. The dataset includes things like temperature, day of week, and points in the school year. Since the focus of our project is to make it as easy for people to go to the gym, this dataset can help us find when the gym is less busy so it is less intimidating and easier to navigate. The second dataset is about a college age friend group about when they went to the gym. It includes how often they went to the gym and motivations around them. As these are college students going to the gym, they can contribute to the data from the first dataset. The third dataset is similar to the first one where it includes timestamps for when people worked out and how packed the gym was at that point. This can also contribute to the data from the first dataset because it shows exactly how packed the gym was at each time. "
+
+dataset2 <- "For the first dataset, Nick Rose collected the data. At the time he was a student at UC Berkeley and used the data for him and others to practice machine learning. It was collected around 6 years ago and was made to see how crowded the gym was. The second dataset was collected by Nithilaa who is a data science student at PSG College Of Technology. It was collected just for survey reasons. The third dataset was made by Daniel Holmes who is most likely a student at University of Ottawa. There is no information on what they do there."
+
+dataset3 <- "Most of the data was collected with the consent from the University, friends or gym so it did not need funding. For the first dataset, the people to benefit from this dataset are generally students looking to work with machine learning since that was the purpose. Outside of that it is meant for people looking to collect information relating to a college gym. This could be people in the college or gym industry. For the second dataset, it was most likely made just to benefit themselves as it was a survey among friends and classmates. For the third dataset it was collected to see if the gym should reopen certain facilities that were actively used. This means those most likely to benefit were those who used the gym facilities at University of Ottawa."
+
+dataset4 <- "The first dataset is not backed by anything beyond the consent of the University and gym. The second dataset does not contain much backing either as it is just information from surveys. The third dataset is similar to the first one where it is not backed by anything except the University and gym. Though the first and third dataset aren’t surveys and are just raw information from data from the University logs itself."
+
+dataset_acknowledgement <- "All of the datasets were obtained from kaggle. We do credit the source of data."
+
+limitations <- "One limitation behind our project is that our data is not directly from our university and is from another. The locational difference in our project may give us results that do not perfectly display what is accurate for the IMA. To adjust for this, we try to take in as many factors as possible like temperature, class, and season that we do share with the other university. The data we are using is from UC Berkeley.
+A second limitation is that there could be reasons beyond data for why people may not be going to the gym. Things like school events are not necc sicily recorded in the data set which can lead people to use the gym more or less than what is considered a normal day. Events like Dawg Daze or parent weekend can change the amount of people that use the gym."
+
+findings1 <- "Regarding the time of day and gym crowdiness, we found that the gym tends to be least busy in the morning. This may be due to the fact that college students generally sleep later and wake up later than other demographics, making it hard for them to attend the gym early. We found that the gym tends to get more and more busy getting closer to 5:00 PM, which was expected as that is when most students are finished with class. Gym attendance stays high throughout the night, only tapering down near the later hours when the gym is about to close.
+It is important to note, though, that gym attendance throughout a certain day is also affected by holidays and weekends - something that will be discussed later."
+
+findings2 <- ""
+
+findings3 <- ""
+
+acknowledgement <- "We would like to acknowledge Thomas Winegarden and Yubing Tian for being great instructors."
+
+reference1 <- "Rose, Nick. “Crowdedness at the Campus Gym.” Kaggle 19 Mar. 2017, www.kaggle.com/datasets/nsrose7224/crowdedness-at-the-campus-gym."
+
+reference2 <- "A., Nithila. “Fitness Analysis.” Kaggle, 8 Sept. 2020, www.kaggle.com/datasets/nithilaa/fitness-analysis."
+
+reference3 <- "Holmes, Daniel. “University of Ottawa Workout Session Demand.” Kaggle, 18 Jan. 2022, www.kaggle.com/datasets/danielholmes/university-of-ottawa-workout-enrolment."

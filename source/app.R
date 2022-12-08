@@ -15,11 +15,8 @@ library(gganimate)
 library(gifski)
 library(shinycssloaders)
 
-source("chart_1.R")
-source("chart_2.R")
-source("chart_3.R")
 
-
+source("text.R")
 source("server.R")
 source("ui.R")
 
