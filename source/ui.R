@@ -19,9 +19,6 @@ library(thematic)
 library(shinythemes)
 
 source("text.R")
-source("chart_1.R")
-source("chart_2.R")
-source("chart_3.R")
 
 #--------------INPUT FUNCTIONS--------------
 
@@ -198,7 +195,10 @@ report <- tabPanel(
   h4("References"),
   p(reference1),
   p(reference2),
-  p(reference3)
+  p(reference3),
+  p(reference4),
+  p(reference5),
+  p(reference6)
 )
 
 #ui put together

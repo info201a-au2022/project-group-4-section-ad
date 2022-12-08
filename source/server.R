@@ -170,7 +170,7 @@ server <- function(input, output) {
   
   #interactive 3
   output$scatterplot3 <- renderPlot({
-    plot(gym_data$number_people, gym_data$temperature)
+    plot(gym_data$number_people, gym_data$temperature, xlab = "Number of People", ylab = "Temperature")
   })
   
   output$info <- renderText({

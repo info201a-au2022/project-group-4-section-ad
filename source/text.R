@@ -57,7 +57,7 @@ summary_takeaways_3 <- "The third chart was more focused on how temperature affe
 
 #REPORT
 
-authors <- "This project was made by Justin Dong and David Phan"
+authors <- "This project was made by Justin Dong and David Pham"
 
 affiliation <- "INFO-201: Technical Foundations of Informatics - The Information School - University of Washington"
 
@@ -88,16 +88,16 @@ values <- "The main value our project is revolved around is gym accesibility. Pe
 yet according to a survey done by better.org, almost 20% of people who don't go to the gym due to confidence issues.
 Our goal is to provide people with a time where the gym is least busy, thus allowing for a more private workout. Additionally,
 our secondary value is to focus on timeliness. According to better.org, the leading barrier to going to the gym for many people 
-is timeliness, with almost 40% of people choosing this option. By providing people with times during which the IMA has the least
-amount of people, we hope to help people speed up their workouts."
+is timeliness, with almost 40% of people choosing this option. The second and third biggest barriers are lack of confidence and gym crowdiness - both issues we can solve.
+By providing people with times during which the IMA has the least amount of people, we hope to help people speed up their workouts."
 
-direct_stakeholders <- "Direct stakeholders in our project are people who want to go to the campus gym and workout but do not have the confidence to. They would directly use our project to find out times when they can go and not be intimidated by a big crowd at the gym. Additionally, another direct stakeholder in our project are people who want to go to the gym but do not have enough time. They would use our project to find good times to go to the gym and get a fast work out in. "
+direct_stakeholders <- "Direct stakeholders in our project are people who want to go to the campus gym and workout but do not have the confidence to. According to topfitnessmag.com, the number one reason why people do not work out is due to feeling self conscious. Our direct stakeholders would directly use our project to find out times when they can go and not be intimidated by a big crowd at the gym. Additionally, another direct stakeholder in our project are people who want to go to the gym but do not have enough time. They would use our project to find good times to go to the gym and get a fast work out in. "
 
 indirect_stakeholders <- "The indirect stakeholders in our project are people who go to the campus gym in general, as although they may have plenty of time and no issues going to the gym, our project is collecting data on them in order to provide an analysis."
 
 harms <- "One issue with our project is that it may lead to more crowding in the gym during times where foot traffic has historically been low. This is due to our project recommending the same time for a particular day as the least busy for everyone using our project. This would lead to our project working against its own goal. A workaround to this would be to update data as our project is being used, and accordingly spread people out."
 
-benefits <- "One benefit to our project is that it will help people find better times to go to the gym. Whether it be people who do not have the confidence to go to a crowded gym or people who have no time to spare, the project can benefit everyone who goes to the gym."
+benefits <- "One benefit to our project is that it will help people find better times to go to the gym. According to pschologist Adam Mulligan from psychreg.org, one of the biggest reasons people stop working out is due to embarassment and intimidation or time constraint. Whether it be people who do not have the confidence to go to a crowded gym or people who have no time to spare, the project can benefit everyone who goes to the gym."
 
 question_1 <- "Is there a relationship between time of day and gym crowdiness?"
 
@@ -147,3 +147,9 @@ reference1 <- "Rose, Nick. “Crowdedness at the Campus Gym.” Kaggle 19 Mar. 2
 reference2 <- "A., Nithila. “Fitness Analysis.” Kaggle, 8 Sept. 2020, www.kaggle.com/datasets/nithilaa/fitness-analysis."
 
 reference3 <- "Holmes, Daniel. “University of Ottawa Workout Session Demand.” Kaggle, 18 Jan. 2022, www.kaggle.com/datasets/danielholmes/university-of-ottawa-workout-enrolment."
+
+reference4 <- "Jeff, and *. “5 Reasons Why People Avoid the Gym.” Top Fitness Magazine, 21 Oct. 2019, https://www.topfitnessmag.com/5-reasons-people-avoid-gym/."
+
+reference5 <- "Unknown. “Better, the Feel Good Place.” A Charitable Social Enterprise. Join Us Now., https://www.better.org.uk/content_pages/top-gym-excuses."
+
+reference6 <- "Mulligan, Adam. “Why People Stop Going to the Gym.” Psychreg, 16 May 2022, https://www.psychreg.org/why-people-stop-going-gym/. "
