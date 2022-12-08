@@ -16,7 +16,7 @@ library(gifski)
 library(shinycssloaders)
 library(thematic)
 
-gym_data <- read.csv("C:/Users/Phamily/Documents/info201/group project/project-group-7-section-ad/data/data.csv")
+gym_data <- read.csv("data.csv")
 
 server <- function(input, output) {
 
