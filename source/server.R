@@ -162,7 +162,7 @@ server <- function(input, output) {
     #plots bargraph of average hourly attendance for holiday and weekend data
     bargraph <- ggplot(bardata) +
       geom_bar(mapping = aes(x = hour, y = number_people, fill = number_people), stat = "identity") +
-      guides(color = FALSE) +
+      guides(color = FALSE, fill = FALSE) +
       xlab("Time") +
       ylab("Number of People") +
       labs(fill = "Foot Traffic") +
